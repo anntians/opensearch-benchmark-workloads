@@ -11,9 +11,10 @@
         {%- if derived_source_enabled is defined and derived_source_enabled %}
         ,"knn.derived_source.enabled": true
         {%- endif %}
-        ,"knn.advanced.approximate_threshold": 10000000
+        ,"knn.advanced.approximate_threshold": 15000
         ,"knn.remote_index_build.enabled": true
-        ,"knn.remote_index_build.size_threshold": "0mb"
+        ,"knn.remote_index_build.size.min": "40mb"
+        ,"refresh_interval": "-1"
       }
     },
     "mappings": {

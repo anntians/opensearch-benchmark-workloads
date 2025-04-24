@@ -1,9 +1,9 @@
 {
     "target_index_name": "target_index_100k",
     "target_field_name": "target_field",
-    "target_index_body": "/home/ohalpert/workplace/opensearch-benchmark-workloads/vectorsearch/indices/faiss-index-100k.json",
-    "target_index_primary_shards": 1,
-    "target_index_replica_shards": 0,
+    "target_index_body": "/workplace/anntians/opensearch-benchmark-workloads/vectorsearch/indices/faiss-index-100k.json",
+    "target_index_primary_shards": 6,
+    "target_index_replica_shards": 1,
     "target_index_dimension": 768,
     "target_index_space_type": "innerproduct",
     
