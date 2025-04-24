@@ -13,7 +13,7 @@
         {%- endif %}
         ,"knn.advanced.approximate_threshold": 15000
         ,"knn.remote_index_build.enabled": true
-        ,"knn.remote_index_build.size_threshold": "40mb"
+        ,"knn.remote_index_build.size_threshold": "50mb"
         ,"refresh_interval": "-1"
       }
     },
