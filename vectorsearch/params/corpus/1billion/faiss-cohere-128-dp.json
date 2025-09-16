@@ -1,0 +1,30 @@
+{
+  "target_index_name": "target_index_1b",
+  "target_field_name": "target_field",
+  "target_index_body": "/home/ec2-user/opensearch-benchmark-workloads/vectorsearch/indices/faiss-index-1b.json",
+  "target_index_primary_shards": 24,
+  "target_index_replica_shards": 1,
+  "target_index_dimension": 128,
+  "target_index_space_type": "innerproduct",
+
+  "target_index_bulk_size": 100,
+  "target_index_bulk_index_data_set_format": "bigann",
+  "target_index_bulk_index_data_set_path": "/home/ec2-user/BIGANN-base.1B.u8bin",
+  "target_index_bulk_indexing_clients": 80,
+
+  "target_index_max_num_segments": 1,
+  "target_index_force_merge_timeout": 172800,
+  "hnsw_ef_search": 256,
+  "hnsw_ef_construction": 256,
+
+  "query_k": 100,
+  "query_body": {
+    "docvalue_fields" : ["_id"],
+    "stored_fields" : "_none_"
+  },
+  "query_data_set_format": "bigann",
+  "query_data_set_path": "/home/ec2-user/BIGANN-query.public.10K.u8bin",
+  "neighbors_data_set_path": "/home/ec2-user/BIGANN-public_query_gt100.bin",
+  "neighbors_data_set_format": "bigann",
+  "query_count": 10000
+}

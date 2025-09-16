@@ -12,8 +12,7 @@
         ,"knn.derived_source.enabled": true
         {%- endif %}
         ,"knn.remote_index_build.enabled": true
-        ,"knn.advanced.approximate_threshold": 10000
-        ,"knn.remote_index_build.size.min": "40mb"
+        ,"knn.advanced.approximate_threshold": 15000
         ,"refresh_interval": "-1"
       }
     },
@@ -42,20 +41,20 @@
             "space_type": "{{ target_index_space_type }}",
             "engine": "faiss",
             "parameters": {
+              "encoder": {
+                "name": "sq",
+                "parameters": {
+                  "type": "fp16"
+                }
+              }
               {%- if hnsw_ef_search is defined and hnsw_ef_search %}
-                "ef_search": {{ hnsw_ef_search }}
+                ,"ef_search": {{ hnsw_ef_search }}
               {%- endif %}
               {%- if hnsw_ef_construction is defined and hnsw_ef_construction %}
-              {%- if hnsw_ef_search is defined and hnsw_ef_search %}
-                ,
-              {%- endif %}
-                "ef_construction": {{ hnsw_ef_construction }}
+                ,"ef_construction": {{ hnsw_ef_construction }}
               {%- endif %}
               {%- if hnsw_m is defined and hnsw_m %}
-              {%- if hnsw_ef_construction is defined and hnsw_ef_construction %}
-                ,
-              {%- endif %}
-                "m": {{ hnsw_m }}
+                ,"m": {{ hnsw_m }}
               {%- endif %}
             }
           }
