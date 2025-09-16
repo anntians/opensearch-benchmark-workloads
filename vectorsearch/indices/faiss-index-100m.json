@@ -12,8 +12,7 @@
         ,"knn.derived_source.enabled": true
         {%- endif %}
         ,"knn.remote_index_build.enabled": true
-        ,"knn.advanced.approximate_threshold": 10000
-        ,"knn.remote_index_build.size.min": "40mb"
+        ,"knn.advanced.approximate_threshold": 15000
         ,"refresh_interval": "-1"
       }
     },
